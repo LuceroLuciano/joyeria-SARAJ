@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyería SARAJ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+        <div class="titulo">
+          <img src="img/logo.jpg" alt="logo joyería" class="logo">
+          <h1>Joyería SARAJ</h1>
+        </div>
+        <div>
+          <nav>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#pedidos">Pedidos</a>
+        </nav>
+        </div>
+    </header>
+
+    <section id="carrusel" class="carrusel-container">
+        <div class="carrusel-slide active">
+          <img src="img/sarajMash.jpeg" alt="Joya Destacada 1">
+          <div class="carrusel-caption">
+              <h2>Colección Éxclusiva: Anillos de Compromiso</h2>
+              <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
+              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+          </div>
+        </div>
+        <div class="carrusel-slide">
+            <img src="img/imagen1.jpg" alt="Joya Destacada 2">
+            <div class="carrusel-caption">
+              <h2>Colección Éxclusiva: Collares</h2>
+              <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
+              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+          </div>
+        </div>
+        <div class="carrusel-slide">
+            <img src="img/imagen2.jpg" alt="Joya Destacada 2">
+            <div class="carrusel-caption">
+              <h2>Colección Éxclusiva: Reloj</h2>
+              <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
+              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+          </div>
+        </div>
+        <div class="carrusel-slide">
+            <img src="img/imagen3.jpg" alt="Joya Destacada 2">
+            <div class="carrusel-caption">
+              <h2>Colección Éxclusiva: Pulceras</h2>
+              <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
+              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+          </div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+        <h2>Nuestro Catálogo</h2>
+        <div class="producto">
+            <img src="img/anillo.jpg" alt="Anillo de Plata">
+            <h3>Anillo Elegance</h3>
+            <p>$150.00</p>
+        </div>
+        <div class="producto">
+            <img src="img/collar.jpg" alt="Collar de Oro">
+            <h3>Collar Royal</h3>
+            <p>$320.00</p>
+        </div>
+        </section>
+
+    <section id="pedidos" class="formulario-container">
+        <h2>Realiza tu Pedido</h2>
+        <form id="formulario-pedido">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="producto">Producto de Interés:</label>
+            <select id="producto" name="producto" required>
+                <option value="">Seleccione un producto</option>
+                <option value="anillo">Anillo Elegance</option>
+                <option value="collar">Collar Royal</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+
+            <button type="submit">Enviar Pedido</button>
+            <p id="mensaje-envio" style="display:none; color: green;">¡Pedido enviado con éxito!</p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Joyería SARAJ</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

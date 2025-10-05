@@ -1,0 +1,286 @@
+/* Base y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    /*background-color: #333;
+    color: white; 
+    padding: 1rem 0;
+    text-align: center;*/
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+div nav {
+    margin-top: 0.5rem;
+    background-color: white;
+    text-align: center;
+}
+
+nav a {
+    color: #333;;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*logo*/
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+}
+
+/* --- Responsive: Catálogo (Grid) --- */
+.catalogo {
+    padding: 2rem;
+    text-align: center;
+}
+
+.catalogo h2 {
+    margin-bottom: 2rem;
+    color: #a37; /* Color de joyería */
+}
+
+.catalogo-grid {
+    display: grid;
+    gap: 20px;
+    /* Por defecto para móvil: 1 columna */
+    grid-template-columns: 1fr; 
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* --- Media Query para Tablet y Escritorio --- */
+@media (min-width: 600px) {
+    .catalogo-grid {
+        /* Tablet: 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 992px) {
+    .catalogo-grid {
+        /* Escritorio: 3 o 4 columnas */
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+/* Estilos de Formulario (Responsive simple) */
+.formulario-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-container input[type="text"],
+.formulario-container input[type="email"],
+.formulario-container select,
+.formulario-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+}
+
+.formulario-container button {
+    background-color: #a37;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Botón responsive */
+}
+
+/* Estilos de Carrusel (Concepto) */
+
+
+.carrusel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 400px; /* Altura de referencia */
+}
+
+.carrusel-container button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Diseño visual */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0; /* Bordes redondeados solo a la derecha */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+    z-index: 10; /* Asegura que estén sobre las imágenes */
+}
+
+
+
+
+/* Posicionamiento específico de los botones */
+.carrusel-container .prev {
+    left: 0;
+    border-radius: 0 5px 5px 0; /* Borde redondeado a la derecha */
+}
+
+.carrusel-container .next {
+    right: 0;
+    border-radius: 5px 0 0 5px; /* Borde redondeado a la izquierda */
+}
+
+/* Efecto al pasar el ratón (Hover) */
+.carrusel-container button:hover {
+    background-color: rgba(160, 51, 119, 0.7); /* Color más visible y alineado a tu marca de joyería */
+}
+
+/* Diseño para pantallas pequeñas (opcional: botones más compactos) */
+@media (max-width: 600px) {
+    .carrusel-container button {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+}
+
+/*.carrusel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}*/
+
+
+
+
+/* --- Posicionamiento y Estilo Base del Texto sobre la Imagen --- */
+
+.carrusel-slide {
+    /* (Asegúrate de que esta propiedad ya esté en tu CSS) */
+    position: relative; 
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-slide.active {
+    display: block;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Centrado del contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    
+    /* Fondo para mejorar la legibilidad del texto */
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura semitransparente */
+    color: white;
+}
+
+.carrusel-caption h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.carrusel-caption p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Estilo del Botón "Ver Más" */
+.btn-ver-mas {
+    background-color: #a37; /* Color de joyería */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #c9529b; /* Tono más claro al pasar el ratón */
+}
+
+
+/* --- Diseño Responsive para Móviles (Ajusta el tamaño de fuente) --- */
+@media (max-width: 600px) {
+    .carrusel-caption h2 {
+        font-size: 1.5em; /* Título más pequeño en móvil */
+    }
+    .carrusel-caption p {
+        font-size: 0.9em; /* Párrafo más pequeño en móvil */
+        display: none; /* Opcional: ocultar el párrafo para ahorrar espacio */
+    }
+}
+
+
+footer {
+text-align: center;
+padding: 1rem;
+background: #333;
+color: white;
+margin-top: 2rem;
+}
