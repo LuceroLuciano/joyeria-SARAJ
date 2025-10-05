@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joyería SARAJ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +13,12 @@
           <img src="img/logo.jpg" alt="logo joyería" class="logo">
           <h1>Joyería SARAJ</h1>
         </div>
-        <div>
+        <div class="menu">
           <nav>
             <a href="#catalogo">Catálogo</a>
             <a href="#pedidos">Pedidos</a>
+            <a href="#">Regalos</a>
+            <a href="#pedidos">Amor y Compromiso</a>
         </nav>
         </div>
     </header>
@@ -24,33 +27,33 @@
         <div class="carrusel-slide active">
           <img src="img/sarajMash.jpeg" alt="Joya Destacada 1">
           <div class="carrusel-caption">
-              <h2>Colección Éxclusiva: Anillos de Compromiso</h2>
-              <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
-              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+              <h2>MAGIC & SHINE</h2>
+              <p>"TU MUNDO, TU ARTE, TU JOYA"</p>
+              <a href="#catalogo" class="btn-ver-mas">Ver Más</a>
           </div>
         </div>
         <div class="carrusel-slide">
             <img src="img/imagen1.jpg" alt="Joya Destacada 2">
             <div class="carrusel-caption">
-              <h2>Colección Éxclusiva: Collares</h2>
+              <h2>Colección Éxclusiva de Otoño</h2>
               <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
-              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+              <a href="#catalogo" class="btn-ver-mas">Ver Más</a>
           </div>
         </div>
         <div class="carrusel-slide">
             <img src="img/imagen2.jpg" alt="Joya Destacada 2">
             <div class="carrusel-caption">
-              <h2>Colección Éxclusiva: Reloj</h2>
-              <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
-              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+              <h2>Porque la razón eres TÚ</h2>
+              <p>"Decora tu espacio con arte único, creado solo para ti.""</p>
+              <a href="#catalogo" class="btn-ver-mas">Ver Más</a>
           </div>
         </div>
         <div class="carrusel-slide">
             <img src="img/imagen3.jpg" alt="Joya Destacada 2">
             <div class="carrusel-caption">
-              <h2>Colección Éxclusiva: Pulceras</h2>
+              <h2>Colección Éxclusiva: Momentos Inolvidables</h2>
               <p>Descubre el brillo perfecto para sellar tu amor. ¡Diseños únicos!</p>
-              <a href="#catalogo" class="btn-ver-mas">Ver Anillos</a>
+              <a href="#catalogo" class="btn-ver-mas">Ver Más</a>
           </div>
         </div>
         <button class="prev">❮</button>
@@ -58,41 +61,74 @@
     </section>
 
     <section id="catalogo" class="catalogo">
-        <h2>Nuestro Catálogo</h2>
+      <h2>Sobre Nosotros</h2>
+      <div class="productos-container">
         <div class="producto">
-            <img src="img/anillo.jpg" alt="Anillo de Plata">
-            <h3>Anillo Elegance</h3>
-            <p>$150.00</p>
+          <img src="img/mujer.webp" alt="Mujer modelo">
+        <!--<h3>Anillo Elegance</h3>-->
+        
         </div>
         <div class="producto">
-            <img src="img/collar.jpg" alt="Collar de Oro">
-            <h3>Collar Royal</h3>
-            <p>$320.00</p>
+          <p>Nuestra joyería es el fruto de un legado de más de 180 años de artesanía experta con preciosos diseños de collares,        colgantes, brazaletes, anillos y más.           
+          </p>
+          
+          <!--<p>La colección MASH es una proeza de ingenio que se concibió en 1998. Cada diseño exhibe los extraordinarios diamantes y el arte incomparable de SARAJ.
+          </p>-->
         </div>
-        </section>
+      </div>
+    </section>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-4">
+          <p>Collar de Oro <br> $150</p>
+          <img src="img/imagen3.jpg" alt="Collar Royal">
+        </div>
+        <div class="col-4">
+          <p>Anillo Elegance <br> $300</p>
+          <img src="img/anillo.jpg" alt="Anillo Elegance">
+        </div>
+        <div class="col-4">
+          <p>Collar Diamante <br> $790</p>
+          <img src="img/imagen1.jpg" alt="Collar Diamante">
+        </div>
+        <div class="col-4">
+          <p>Pulcera Oro <br> $320</p>
+          <img src="img/imagen2.jpg" alt="Pulcera Oro">
+        </div>
+        <div class="col-4">
+          <p>Aretes Perla <br> $200</p>
+          <img src="img/aretes.jpg" alt="Aretes Perla">
+        </div>
+        <div class="col-4">
+          <p>Reloj <br>$300</p>
+          <img src="img/reloj.jpg" alt="Reloj">
+        </div>
+      </div>
+    </div>
 
     <section id="pedidos" class="formulario-container">
-        <h2>Realiza tu Pedido</h2>
-        <form id="formulario-pedido">
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
+      <h2>Realiza tu Pedido</h2>
+      <form id="formulario-pedido">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="producto">Producto de Interés:</label>
-            <select id="producto" name="producto" required>
-                <option value="">Seleccione un producto</option>
-                <option value="anillo">Anillo Elegance</option>
-                <option value="collar">Collar Royal</option>
-            </select>
+        <label for="producto">Producto de Interés:</label>
+        <select id="producto" name="producto" required>
+            <option value="">Seleccione un producto</option>
+            <option value="anillo">Anillo Elegance</option>
+            <option value="collar">Collar Royal</option>
+        </select>
 
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
 
-            <button type="submit">Enviar Pedido</button>
-            <p id="mensaje-envio" style="display:none; color: green;">¡Pedido enviado con éxito!</p>
-        </form>
+        <button type="submit">Enviar Pedido</button>
+        <p id="mensaje-envio" style="display:none; color: green;">¡Pedido enviado con éxito!</p>
+      </form>
     </section>
 
     <footer>
@@ -100,5 +136,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
